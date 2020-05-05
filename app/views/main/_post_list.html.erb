@@ -1,0 +1,47 @@
+<div class = output-main>
+   <div class = list>
+      <ul>
+         <% @post.each do |p| %>
+         <li>
+            <%= link_to("/posts/#{p.id}/" , {class: "list-content"}) do %>
+            <div class = contents>
+               <div class = img>
+                  <div class = i><%= image_tag p.image.thumb.to_s %></div>
+               </div>
+               <div class = title>
+                  <h2><%=p.title%></h2>
+                  <!--<h6>> <%=link_to "#{p.categories.name}" , "/categories/#{p.categories.id}/"%></h6>-->
+                  <h6>> <%= p.categories.name %></h6>
+                  <p><%=p.created_at.strftime('%Y-%m-%d')%></p>
+               </div>
+               <!--<div class = likes>
+                  <p>good!</p>
+               </div>-->
+            </div>
+            <%end%>
+         </li>
+         <%end%>
+      </ul>
+   </div>
+   <div class = category>
+      <h2>カテゴリ</h2>
+      <ul>
+         <% @category.each do |c| %>
+         <li><h4>■ <%=link_to "#{c.name}" , "/categories/#{c.id}/"%>(<%=c.count%>)</h4></li>
+         <%end%>
+      </ul>
+   </div>
+   <div class = newest>
+      <h2>最近の投稿</h1>
+      <ul>
+         <% @post.each do |newpost| %>
+         <li>
+            <div class = newest-title>
+               <h3><%= link_to "#{newpost.title}" , "/posts/#{newpost.id}/"%></h3>
+               <p><%=newpost.created_at%></p>
+            </div>
+         </li>
+         <%end%>
+      </ul>
+   </div>
+</div>

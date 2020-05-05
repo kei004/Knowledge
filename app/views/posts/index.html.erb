@@ -1,0 +1,27 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+<div class = "Post-body">
+
+  <div class = "post-form">
+
+    <%= form_for(:post, url: create_path) do |f| %>
+      <%= f.label :タイトル %>
+      <%= f.text_field :title, class: 'form-control', placeholder: 'タイトル'%>
+      
+      <%= f.label :カテゴリ %>
+      <%= f.select :categories_id, [["Web開発", 1], ["MUP", 2],["iOS開発", 3],["英会話", 4]],  :prompt => "選択してください"%>
+
+      <%= f.label :画像 %>
+      <%= f.file_field :image, class: 'form-control-contents'%>
+      
+      <%= f.label :内容 %>
+      <%= f.cktext_area :contents, class: 'form-control-contents', placeholder: '内容'%>
+
+      <%= f.submit "Create", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+
+</div>
+<%= javascript_include_tag 'posts', 'data-turbolinks-track': 'reload' %>
