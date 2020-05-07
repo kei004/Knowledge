@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
+    @category = Categories.all
+    @posts = Post.all
   end
 
   def index

@@ -9,10 +9,34 @@
       <div class="post-categories">
          <p><%= link_to "HOME", home_path %> / <%= link_to "#{@post.categories.name}", "/categories/#{@post.categories.id}" %></p>
       </div>
+      <div class="post-img">
+         <div class = i><%= image_tag @post.image.to_s %></div>
+      </div>
       <div class="post-contents">
       <%== @post.contents %>
       </div>
    </div>
    <div class="post-sub">
+      <div class = category>
+         <h2>カテゴリ</h2>
+         <ul>
+            <% @category.each do |c| %>
+            <li><h4>■ <%=link_to "#{c.name}" , "/categories/#{c.id}/"%>(<%=c.count%>)</h4></li>
+            <%end%>
+         </ul>
+      </div>
+      <div class = newest>
+         <h2>最近の投稿</h1>
+         <ul>
+            <% @posts.each do |newpost| %>
+            <li>
+               <div class = newest-title>
+                  <h3><%= link_to "#{newpost.title}" , "/posts/#{newpost.id}/"%></h3>
+                  <p><%=newpost.created_at%></p>
+               </div>
+            </li>
+            <%end%>
+         </ul>
+      </div>
    </div>
 </div>

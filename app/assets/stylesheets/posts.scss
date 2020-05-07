@@ -1,6 +1,11 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@media (max-width: 767px) {
+}
+@media (min-width: 768px) and (max-width: 1029px) {
+}
+@media (min-width: 1030px) {
 .post-top{
    width: 100%;
    height: 80px;
@@ -87,6 +92,12 @@
             }
          }
       }
+      .post-img{
+         width:100%;
+         height:6%;
+         margin: 0;
+         padding: 0;
+      }
       .post-contents{
          width:100%;
          height: 95%;
@@ -119,6 +130,97 @@
       padding: 2% 2% 2% 2%;
       border-radius: 4px;
       float: left;
+      .category{
+         float: left;
+         width: 90%;
+         height:10%;
+         margin: 0;
+         padding: 0 5%;
+         
+         ul li{
+            
+            list-style: none;
+            h4{
+               text-align: left;
+               font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+               font-size: 120%;
+               width: 100%;
+               margin: 0;
+               padding: 0;
+               color:rgb(126, 124, 124);
+               a{
+                  text-decoration: none;
+               }
+            }
+         }
+         h2{
+   
+            text-align: center;
+            //font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+            font-size: 120%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            color:rgb(34, 35, 105);
+            border-bottom: thin solid #0c00b4;
+   
+         }
+      }
+      .newest{
+         float: left;
+         width: 90%;
+         height:25%;
+         margin: 0;
+         padding: 0 5%;
+         h2{
+            text-align: center;
+            //font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+            font-size: 120%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-bottom: thin solid #0c00b4;
+            color:rgb(34, 35, 105);
+         }
+         ul {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            float: left;
+            li{
+               list-style: none;
+               margin: 0;
+               padding: 0;
+               width: 100%;
+               height:10%;
+               background-color: rgb(236, 235, 235);
+               border-radius: 5px;
+               &:hover{
+                  background-color: rgba(208, 208, 209, 0.767);
+               }
+               .newest-title{
+                  margin: 0 10%;
+                  padding: 0;
+                  width:80%;
+                  height: 100%;
+                  h3{
+                     padding: 0;
+                     a{
+                        text-decoration: none;
+                     }
+                     &:hover{
+                        color: rgb(59, 5, 184);
+                        list-style: none;
+                     }
+                  }
+                  p{
+                     margin: 0;
+                  }
+               }
+            }
+         }
+      }
    }
 }
 
@@ -151,4 +253,5 @@
    input {
        height: auto !important;
    }
+}
 }

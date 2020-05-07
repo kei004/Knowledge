@@ -28,7 +28,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # 画像の最大数を指定
-  # process resize_to_fit: [1200, 1200]
+  process resize_to_fill: [756, 177]
   #
   # def scale(width, height)
   #   # do something
