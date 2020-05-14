@@ -21,6 +21,9 @@
             <%end%>
          </li>
          <%end%>
+         <div class = paginate>
+            <%= paginate @post %>
+         </div>
       </ul>
    </div>
    <div class = category>
@@ -34,11 +37,11 @@
    <div class = newest>
       <h2>最近の投稿</h1>
       <ul>
-         <% @post.each do |newpost| %>
+         <% @posts.each do |newpost| %>
          <li>
             <div class = newest-title>
                <h3><%= link_to "#{newpost.title}" , "/posts/#{newpost.id}/"%></h3>
-               <p><%=newpost.created_at%></p>
+               <p><%=newpost.created_at.strftime('%Y/%m/%d')%></p>
             </div>
          </li>
          <%end%>

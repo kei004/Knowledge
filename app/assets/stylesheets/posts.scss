@@ -1,9 +1,694 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@media (max-width: 767px) {
+@media (max-width: 420px) {
+   .post-top{
+      width: 100%;
+      height: 80px;
+      float: left;
+      position:relative;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180.0deg, rgb(255, 255, 255) 35%, rgba(255, 255, 255, 0) 100%), linear-gradient(180.0deg, rgb(218, 216, 216) 10%, rgb(223, 221, 221) 10%);
+   
+      h1{
+         height:100%;
+         width:100%;
+         text-align: center;
+         font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+         font-size:350%;
+         background: -webkit-linear-gradient(0.0deg,#1A294F 30%, rgba(26,41,79,0.49) 49%, rgba(26,41,79,0.49019607843137253) 48%, #1A294F 67%);
+         background: -moz-linear-gradient(0.0deg,#1A294F 30%, rgba(26,41,79,0.49) 49%, rgba(26,41,79,0.49019607843137253) 48%, #1A294F 67%);
+         background: linear-gradient(0.0deg,#1A294F 30%, rgba(26,41,79,0.49) 49%, rgba(26,41,79,0.49019607843137253) 48%, #1A294F 67%);
+         -webkit-background-clip: text;//テキストでくり抜く
+         -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+         font-weight: bolder;
+         margin: auto;
+         padding:auto;
+         font-weight:bold;
+         position:absolute;
+         top: 50%;
+         left: 50%;
+         -ms-transform: translate(-50%,-50%);
+         -webkit-transform : translate(-50%,-50%);
+         transform : translate(-50%,-50%);
+   
+      }
+   }
+   .post{
+      margin: 0;
+      padding: 2% 9%;
+      width: 82%;
+      height: auto !important;
+      float: left;
+      background-color: rgb(223, 221, 221);
+      .post-main{
+         margin: 0;
+         height: 98%;
+         //padding: 2% 0 2% 2%;
+         //width:68%;
+         //border-top-left-radius: 4px;
+         //border-bottom-left-radius: 4px;
+         padding: 2% 2% 2% 2%;
+         width:100%;
+         margin-right:2%;
+         border-top-left-radius: 4px;
+         border-top-right-radius: 4px;
+         float: left;
+         background-color: white;
+         .post-title{
+            width: 100%;
+            height: 2%;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 2%;
+            h2{
+               margin: 0;
+               padding: 0;
+               padding-left: 2%;
+               padding-bottom: 2%;
+               text-align: left;
+               font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+               font-size:200%;
+            }
+            border-bottom: solid 5px rgb(20, 15, 83);
+         }
+         .post-categories{
+            width:100%;
+            height:1%;
+            margin: 0;
+            padding: 0;
+            p{
+               margin: 0;
+               padding: 0;
+               padding-left: 2%;
+               text-align: left;
+               font-family: 'MS ゴシック',  sans-serif;
+               a{
+                  text-decoration: none;
+               }
+            }
+         }
+         .post-img{
+            width:100%;
+            height:6%;
+            margin: 0;
+            padding: 0;
+            img{
+               margin: 0;
+               padding: 0;
+               height: 100%;
+               width: 100%;
+               //border-radius: 5%;
+            }
+         }
+         .post-contents{
+            width:100%;
+            height: 95%;
+            float: left;
+            padding-top: 5%;
+            .contents-list{
+               border: solid 1px rgb(176, 176, 177);
+               margin: 2% 20%;
+               padding: 2%;
+               width:76%;
+               height:10%;
+               .list-title{
+                  margin: auto;
+                  padding:auto;
+                  width:100%;
+                  height: 2%;
+               }
+            }
+         }
+      }
+      .post-sub{
+         background-color: white;
+         margin: 0;
+         height: 98%;
+         //width: 28%;
+         //padding: 2% 2% 2% 0;
+         //border-top-right-radius: 5px;
+         //border-bottom-right-radius: 5px;
+         width: 100%;
+         padding: 2% 2% 2% 2%;
+         border-bottom-left-radius: 4px;
+         border-bottom-right-radius: 4px;
+         float: left;
+         .categorys{
+            float: left;
+            width: 46%;
+            height:10%;
+            margin: 0;
+            padding: 0 2%;
+            
+            .categorys-ul li{
+               
+               list-style: none;
+               h4{
+                  text-align: left;
+                  font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+                  font-size: 100%;
+                  width: 100%;
+                  margin: 0;
+                  padding: 0;
+                  color:rgb(126, 124, 124);
+                  a{
+                     text-decoration: none;
+                  }
+               }
+            }
+            h2{
+      
+               text-align: center;
+               //font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+               font-size: 120%;
+               width: 100%;
+               margin: 0;
+               padding: 0;
+               color:rgb(34, 35, 105);
+               border-bottom: thin solid #0c00b4;
+      
+            }
+         }
+         .newest{
+            float: left;
+            width: 46%;
+            height:25%;
+            margin: 0;
+            padding: 0 2%;
+            h2{
+               text-align: center;
+               //font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+               font-size: 100%;
+               width: 100%;
+               margin: 0;
+               padding: 0;
+               border-bottom: thin solid #0c00b4;
+               color:rgb(34, 35, 105);
+            }
+            ul {
+               width: 100%;
+               height: 100%;
+               margin: 0;
+               padding: 0;
+               float: left;
+               li{
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+                  width: 100%;
+                  height:10%;
+                  background-color: rgb(236, 235, 235);
+                  border-radius: 5px;
+                  &:hover{
+                     background-color: rgba(208, 208, 209, 0.767);
+                  }
+                  .newest-title{
+                     margin: 0 10%;
+                     padding: 0;
+                     width:80%;
+                     height: 100%;
+                     h3{
+                        padding: 0;
+                        a{
+                           text-decoration: none;
+                           font-size: 75%;
+                        }
+                        &:hover{
+                           color: rgb(59, 5, 184);
+                           list-style: none;
+                        }
+                     }
+                     p{
+                        font-size: 75%;
+                        margin: 0;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+}
+@media (min-width: 421px) and (max-width: 767px) {
+   .post-top{
+      width: 100%;
+      height: 80px;
+      float: left;
+      position:relative;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180.0deg, rgb(255, 255, 255) 35%, rgba(255, 255, 255, 0) 100%), linear-gradient(180.0deg, rgb(218, 216, 216) 10%, rgb(223, 221, 221) 10%);
+   
+      h1{
+         height:100%;
+         width:100%;
+         text-align: center;
+         font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+         font-size:350%;
+         background: -webkit-linear-gradient(0.0deg,#1A294F 30%, rgba(26,41,79,0.49) 49%, rgba(26,41,79,0.49019607843137253) 48%, #1A294F 67%);
+         background: -moz-linear-gradient(0.0deg,#1A294F 30%, rgba(26,41,79,0.49) 49%, rgba(26,41,79,0.49019607843137253) 48%, #1A294F 67%);
+         background: linear-gradient(0.0deg,#1A294F 30%, rgba(26,41,79,0.49) 49%, rgba(26,41,79,0.49019607843137253) 48%, #1A294F 67%);
+         -webkit-background-clip: text;//テキストでくり抜く
+         -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+         font-weight: bolder;
+         margin: auto;
+         padding:auto;
+         font-weight:bold;
+         position:absolute;
+         top: 50%;
+         left: 50%;
+         -ms-transform: translate(-50%,-50%);
+         -webkit-transform : translate(-50%,-50%);
+         transform : translate(-50%,-50%);
+   
+      }
+   }
+   .post{
+      margin: 0;
+      padding: 2% 9%;
+      width: 82%;
+      height: auto !important;
+      float: left;
+      background-color: rgb(223, 221, 221);
+      .post-main{
+         margin: 0;
+         height: 98%;
+         //padding: 2% 0 2% 2%;
+         //width:68%;
+         //border-top-left-radius: 4px;
+         //border-bottom-left-radius: 4px;
+         padding: 2% 2% 2% 2%;
+         width:100%;
+         margin-right:2%;
+         border-top-left-radius: 4px;
+         border-top-right-radius: 4px;
+         float: left;
+         background-color: white;
+         .post-title{
+            width: 100%;
+            height: 2%;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 2%;
+            h2{
+               margin: 0;
+               padding: 0;
+               padding-left: 2%;
+               padding-bottom: 2%;
+               text-align: left;
+               font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+               font-size:200%;
+            }
+            border-bottom: solid 5px rgb(20, 15, 83);
+         }
+         .post-categories{
+            width:100%;
+            height:1%;
+            margin: 0;
+            padding: 0;
+            p{
+               margin: 0;
+               padding: 0;
+               padding-left: 2%;
+               text-align: left;
+               font-family: 'MS ゴシック',  sans-serif;
+               a{
+                  text-decoration: none;
+               }
+            }
+         }
+         .post-img{
+            width:100%;
+            height:6%;
+            margin: 0;
+            padding: 0;
+            img{
+               margin: 0;
+               padding: 0;
+               height: 100%;
+               width: 100%;
+               //border-radius: 5%;
+            }
+         }
+         .post-contents{
+            width:100%;
+            height: 95%;
+            float: left;
+            padding-top: 5%;
+            .contents-list{
+               border: solid 1px rgb(176, 176, 177);
+               margin: 2% 20%;
+               padding: 2%;
+               width:76%;
+               height:10%;
+               .list-title{
+                  margin: auto;
+                  padding:auto;
+                  width:100%;
+                  height: 2%;
+               }
+            }
+         }
+      }
+      .post-sub{
+         background-color: white;
+         margin: 0;
+         height: 98%;
+         //width: 28%;
+         //padding: 2% 2% 2% 0;
+         //border-top-right-radius: 5px;
+         //border-bottom-right-radius: 5px;
+         width: 100%;
+         padding: 2% 2% 2% 2%;
+         border-bottom-left-radius: 4px;
+         border-bottom-right-radius: 4px;
+         float: left;
+         .categorys{
+            float: left;
+            width: 46%;
+            height:10%;
+            margin: 0;
+            padding: 0 2%;
+            
+            .categorys-ul li{
+               
+               list-style: none;
+               h4{
+                  text-align: left;
+                  font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+                  font-size: 100%;
+                  width: 100%;
+                  margin: 0;
+                  padding: 0;
+                  color:rgb(126, 124, 124);
+                  a{
+                     text-decoration: none;
+                  }
+               }
+            }
+            h2{
+      
+               text-align: center;
+               //font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+               font-size: 120%;
+               width: 100%;
+               margin: 0;
+               padding: 0;
+               color:rgb(34, 35, 105);
+               border-bottom: thin solid #0c00b4;
+      
+            }
+         }
+         .newest{
+            float: left;
+            width: 46%;
+            height:25%;
+            margin: 0;
+            padding: 0 2%;
+            h2{
+               text-align: center;
+               //font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+               font-size: 100%;
+               width: 100%;
+               margin: 0;
+               padding: 0;
+               border-bottom: thin solid #0c00b4;
+               color:rgb(34, 35, 105);
+            }
+            ul {
+               width: 100%;
+               height: 100%;
+               margin: 0;
+               padding: 0;
+               float: left;
+               li{
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+                  width: 100%;
+                  height:10%;
+                  background-color: rgb(236, 235, 235);
+                  border-radius: 5px;
+                  &:hover{
+                     background-color: rgba(208, 208, 209, 0.767);
+                  }
+                  .newest-title{
+                     margin: 0 10%;
+                     padding: 0;
+                     width:80%;
+                     height: 100%;
+                     h3{
+                        padding: 0;
+                        a{
+                           text-decoration: none;
+                           font-size: 75%;
+                        }
+                        &:hover{
+                           color: rgb(59, 5, 184);
+                           list-style: none;
+                        }
+                     }
+                     p{
+                        font-size: 75%;
+                        margin: 0;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
 }
 @media (min-width: 768px) and (max-width: 1029px) {
+   .post-top{
+      width: 100%;
+      height: 80px;
+      float: left;
+      position:relative;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180.0deg, rgb(255, 255, 255) 35%, rgba(255, 255, 255, 0) 100%), linear-gradient(180.0deg, rgb(218, 216, 216) 10%, rgb(223, 221, 221) 10%);
+   
+      h1{
+         height:100%;
+         width:100%;
+         text-align: center;
+         font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+         font-size:350%;
+         background: -webkit-linear-gradient(0.0deg,#1A294F 30%, rgba(26,41,79,0.49) 49%, rgba(26,41,79,0.49019607843137253) 48%, #1A294F 67%);
+         background: -moz-linear-gradient(0.0deg,#1A294F 30%, rgba(26,41,79,0.49) 49%, rgba(26,41,79,0.49019607843137253) 48%, #1A294F 67%);
+         background: linear-gradient(0.0deg,#1A294F 30%, rgba(26,41,79,0.49) 49%, rgba(26,41,79,0.49019607843137253) 48%, #1A294F 67%);
+         -webkit-background-clip: text;//テキストでくり抜く
+         -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
+         font-weight: bolder;
+         margin: auto;
+         padding:auto;
+         font-weight:bold;
+         position:absolute;
+         top: 50%;
+         left: 50%;
+         -ms-transform: translate(-50%,-50%);
+         -webkit-transform : translate(-50%,-50%);
+         transform : translate(-50%,-50%);
+   
+      }
+   }
+   .post{
+      margin: 0;
+      padding: 2% 9%;
+      width: 82%;
+      height: auto !important;
+      float: left;
+      background-color: rgb(223, 221, 221);
+      .post-main{
+         margin: 0;
+         height: 98%;
+         //padding: 2% 0 2% 2%;
+         //width:68%;
+         //border-top-left-radius: 4px;
+         //border-bottom-left-radius: 4px;
+         padding: 2% 2% 2% 2%;
+         width:64%;
+         margin-right:2%;
+         border-radius: 4px;
+         float: left;
+         background-color: white;
+         .post-title{
+            width: 100%;
+            height: 2%;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 2%;
+            h2{
+               margin: 0;
+               padding: 0;
+               padding-left: 2%;
+               padding-bottom: 2%;
+               text-align: left;
+               font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+               font-size:200%;
+            }
+            border-bottom: solid 5px rgb(20, 15, 83);
+         }
+         .post-categories{
+            width:100%;
+            height:1%;
+            margin: 0;
+            padding: 0;
+            p{
+               margin: 0;
+               padding: 0;
+               padding-left: 2%;
+               text-align: left;
+               font-family: 'MS ゴシック',  sans-serif;
+               a{
+                  text-decoration: none;
+               }
+            }
+         }
+         .post-img{
+            width:100%;
+            height:6%;
+            margin: 0;
+            padding: 0;
+            img{
+               margin: 0;
+               padding: 0;
+               height: 100%;
+               width: 100%;
+               //border-radius: 5%;
+            }
+         }
+         .post-contents{
+            width:100%;
+            height: 95%;
+            float: left;
+            padding-top: 5%;
+            .contents-list{
+               border: solid 1px rgb(176, 176, 177);
+               margin: 2% 20%;
+               padding: 2%;
+               width:76%;
+               height:10%;
+               .list-title{
+                  margin: auto;
+                  padding:auto;
+                  width:100%;
+                  height: 2%;
+               }
+            }
+         }
+      }
+      .post-sub{
+         background-color: white;
+         margin: 0;
+         height: 98%;
+         //width: 28%;
+         //padding: 2% 2% 2% 0;
+         //border-top-right-radius: 5px;
+         //border-bottom-right-radius: 5px;
+         width: 26%;
+         padding: 2% 2% 2% 2%;
+         border-radius: 4px;
+         float: left;
+         .categorys{
+            float: left;
+            width: 96%;
+            height:10%;
+            margin: 0;
+            padding: 0 2%;
+            
+            .categorys-ul li{
+               
+               list-style: none;
+               h4{
+                  text-align: left;
+                  font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+                  font-size: 100%;
+                  width: 100%;
+                  margin: 0;
+                  padding: 0;
+                  color:rgb(126, 124, 124);
+                  a{
+                     text-decoration: none;
+                  }
+               }
+            }
+            h2{
+      
+               text-align: center;
+               //font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+               font-size: 120%;
+               width: 100%;
+               margin: 0;
+               padding: 0;
+               color:rgb(34, 35, 105);
+               border-bottom: thin solid #0c00b4;
+      
+            }
+         }
+         .newest{
+            float: left;
+            width: 96%;
+            height:25%;
+            margin: 0;
+            padding: 0 2%;
+            h2{
+               text-align: center;
+               //font-family: 'ＭＳ 明朝', 'MS Mincho','ヒラギノ明朝 ProN','Hiragino Mincho ProN','TsukuBRdGothic-Regular',  sans-serif;
+               font-size: 100%;
+               width: 100%;
+               margin: 0;
+               padding: 0;
+               border-bottom: thin solid #0c00b4;
+               color:rgb(34, 35, 105);
+            }
+            ul {
+               width: 100%;
+               height: 100%;
+               margin: 0;
+               padding: 0;
+               float: left;
+               li{
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+                  width: 100%;
+                  height:10%;
+                  background-color: rgb(236, 235, 235);
+                  border-radius: 5px;
+                  &:hover{
+                     background-color: rgba(208, 208, 209, 0.767);
+                  }
+                  .newest-title{
+                     margin: 0 10%;
+                     padding: 0;
+                     width:80%;
+                     height: 100%;
+                     h3{
+                        padding: 0;
+                        a{
+                           text-decoration: none;
+                           font-size: 75%;
+                        }
+                        &:hover{
+                           color: rgb(59, 5, 184);
+                           list-style: none;
+                        }
+                     }
+                     p{
+                        font-size: 75%;
+                        margin: 0;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
 }
 @media (min-width: 1030px) {
 .post-top{
@@ -43,7 +728,8 @@
    margin: 0;
    padding: 2% 9%;
    width: 82%;
-   height: 3000px;
+   min-height: 720px;
+   height: auto !important;
    float: left;
    background-color: rgb(223, 221, 221);
    .post-main{
@@ -97,6 +783,13 @@
          height:6%;
          margin: 0;
          padding: 0;
+         img{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            //border-radius: 5%;
+         }
       }
       .post-contents{
          width:100%;
@@ -130,14 +823,14 @@
       padding: 2% 2% 2% 2%;
       border-radius: 4px;
       float: left;
-      .category{
+      .categorys{
          float: left;
          width: 90%;
          height:10%;
          margin: 0;
          padding: 0 5%;
          
-         ul li{
+         .categorys-ul li{
             
             list-style: none;
             h4{

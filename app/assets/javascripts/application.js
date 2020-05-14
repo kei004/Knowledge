@@ -16,3 +16,11 @@
 //= require turbolinks
 //= require jquery
 //= require bootstrap
+//$(function() {
+//const BodyWidth = document.documentElement.clientWidth;
+//   if (BodyWidth < 420) {
+//      let image = '<img id="Menu" src="assets/Menu.png"/>'
+//      $(".logo").html(image);
+//   }
+//   console.log(BodyWidth)
+//});
